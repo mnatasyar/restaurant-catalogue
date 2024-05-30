@@ -1,12 +1,14 @@
 import RestaurantItem from "./RestaurantItem";
 import PropTypes from "prop-types";
+import Grid from "./styled/Grid";
+
 export default function RestaurantsList({ restaurants }) {
   return (
-    <div className="grid">
+    <Grid>
       {restaurants.map((restaurant) => (
         <RestaurantItem key={restaurant.id} {...restaurant} />
       ))}
-    </div>
+    </Grid>
   );
 }
 RestaurantsList.propTypes = {
